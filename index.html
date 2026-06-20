@@ -1,135 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnHub - Interactive Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="overlay" id="overlay"></div>
     <div class="sidebar-mobile" id="mobileSidebar">
-        <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
-        <h2 class="logo">
-            LearnHub
-            <button class="theme-toggle" id="mobileThemeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
-        </h2>
-        <nav>
-            <a href="#" data-page="dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a>
-            <a href="#" data-page="courses"><i class="fas fa-book-open"></i> Courses</a>
-            <a href="#" data-page="course-detail"><i class="fas fa-chart-line"></i> Progress</a>
-            <a href="#" data-page="video-embed"><i class="fas fa-video"></i> Videos</a>
-        </nav>
+      <button class="close-sidebar" id="closeSidebar">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2 class="logo">
+        LearnHub
+        <button class="theme-toggle" id="mobileThemeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </h2>
+      <nav>
+        <a href="#" data-page="dashboard" class="active"
+          ><i class="fas fa-home"></i> Dashboard</a
+        >
+        <a href="#" data-page="courses"
+          ><i class="fas fa-book-open"></i> Courses</a
+        >
+        <a href="#" data-page="course-detail"
+          ><i class="fas fa-chart-line"></i> Progress</a
+        >
+        <a href="#" data-page="video-embed"
+          ><i class="fas fa-video"></i> Videos</a
+        >
+      </nav>
     </div>
 
     <div class="container">
-        <aside class="sidebar">
-            <h2 class="logo">
-                LearnHub
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </h2>
-            <nav>
-                <a href="#" data-page="dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a>
-                <a href="#" data-page="courses"><i class="fas fa-book-open"></i> Courses</a>
-                <a href="#" data-page="course-detail"><i class="fas fa-chart-line"></i> Progress</a>
-                <a href="#" data-page="video-embed"><i class="fas fa-video"></i> Videos</a>
-            </nav>
-        </aside>
-        
-        <main class="content">
-            <header class="header">
-                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search courses..." id="searchInput">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="user-profile">
-                    <span class="username">Ragavi K G</span>
-                    <div class="avatar">R</div>
-                </div>
-            </header>
-            
-            <!-- Dashboard Content -->
-            <div id="dashboard-content">
-                <div class="dashboard-cards">
-                    <div class="card">
-                        <h3>Active Courses</h3>
-                        <p id="active-courses-count">5</p>
-                    </div>
-                    <div class="card">
-                        <h3>Completed</h3>
-                        <p id="completed-courses-count">3</p>
-                    </div>
-                    <div class="card">
-                        <h3>Hours Learned</h3>
-                        <p id="hours-learned">42</p>
-                    </div>
-                    <div class="card">
-                        <h3>Current Streak</h3>
-                        <p id="current-streak">7 days</p>
-                    </div>
-                </div>
+      <aside class="sidebar">
+        <h2 class="logo">
+          LearnHub
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </h2>
+        <nav>
+          <a href="#" data-page="dashboard" class="active"
+            ><i class="fas fa-home"></i> Dashboard</a
+          >
+          <a href="#" data-page="courses"
+            ><i class="fas fa-book-open"></i> Courses</a
+          >
+          <a href="#" data-page="course-detail"
+            ><i class="fas fa-chart-line"></i> Progress</a
+          >
+          <a href="#" data-page="video-embed"
+            ><i class="fas fa-video"></i> Videos</a
+          >
+        </nav>
+      </aside>
 
-                <div class="recent-courses">
-                    <h2>Recent Courses</h2>
-                    <div id="recent-courses-list">
-                        <!-- Filled by JavaScript -->
-                    </div>
-                </div>
-            </div>
+      <main class="content">
+        <header class="header">
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="search-bar">
+            <input
+              type="text"
+              placeholder="Search courses..."
+              id="searchInput"
+            />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="user-profile">
+            <span class="username">Divyadharshini S K</span>
+            <div class="avatar">R</div>
+          </div>
+        </header>
 
-            <!-- Courses Content -->
-            <div id="courses-content" class="hidden">
-                <h2>Available Courses</h2>
-                <div class="course-grid" id="course-grid">
-                    <!-- Filled by JavaScript -->
-                </div>
+        <!-- Dashboard Content -->
+        <div id="dashboard-content">
+          <div class="dashboard-cards">
+            <div class="card">
+              <h3>Active Courses</h3>
+              <p id="active-courses-count">5</p>
             </div>
+            <div class="card">
+              <h3>Completed</h3>
+              <p id="completed-courses-count">3</p>
+            </div>
+            <div class="card">
+              <h3>Hours Learned</h3>
+              <p id="hours-learned">42</p>
+            </div>
+            <div class="card">
+              <h3>Current Streak</h3>
+              <p id="current-streak">7 days</p>
+            </div>
+          </div>
 
-            <!-- Course Detail Content -->
-            <div id="course-detail-content" class="hidden">
-                <button class="back-btn" id="back-to-courses"><i class="fas fa-arrow-left"></i> Back to Courses</button>
-                <div class="course-header">
-                    <h1 id="course-detail-title">Web Development</h1>
-                    <div class="progress-bar">
-                        <div class="progress" id="course-progress" style="width: 65%"></div>
-                    </div>
-                </div>
-                
-                <div class="lesson-list" id="lesson-list">
-                    <!-- Filled by JavaScript -->
-                </div>
+          <div class="recent-courses">
+            <h2>Recent Courses</h2>
+            <div id="recent-courses-list">
+              <!-- Filled by JavaScript -->
             </div>
+          </div>
+        </div>
 
-            <!-- Video Embed Content -->
-            <div id="video-embed-content" class="hidden">
-                <button class="back-btn" id="back-from-video"><i class="fas fa-arrow-left"></i> Back</button>
-                <div class="video-container">
-                    <iframe id="video-player" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1" allowfullscreen></iframe>
-                </div>
-                <div class="video-controls">
-                    <button id="play-btn"><i class="fas fa-play"></i> Play</button>
-                    <button id="pause-btn"><i class="fas fa-pause"></i> Pause</button>
-                    <button id="fullscreen-btn"><i class="fas fa-expand"></i> Fullscreen</button>
-                </div>
-                <div class="course-info" style="margin-top: 2rem;">
-                    <h2 id="video-course-title">Web Development Fundamentals</h2>
-                    <p id="video-lesson-title">Lesson 1: Introduction to HTML</p>
-                    <p id="video-description">In this lesson, we'll cover the basics of HTML structure and commonly used tags.</p>
-                </div>
-                <div class="recommended-tutorials" style="margin-top: 3rem;">
-                    <h3>Recommended Tutorials</h3>
-                    <div id="tutorial-list" class="tutorial-list">
-                        <!-- Tutorials will be populated by JavaScript -->
-                    </div>
-                </div>
+        <!-- Courses Content -->
+        <div id="courses-content" class="hidden">
+          <h2>Available Courses</h2>
+          <div class="course-grid" id="course-grid">
+            <!-- Filled by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Course Detail Content -->
+        <div id="course-detail-content" class="hidden">
+          <button class="back-btn" id="back-to-courses">
+            <i class="fas fa-arrow-left"></i> Back to Courses
+          </button>
+          <div class="course-header">
+            <h1 id="course-detail-title">Web Development</h1>
+            <div class="progress-bar">
+              <div
+                class="progress"
+                id="course-progress"
+                style="width: 65%"
+              ></div>
             </div>
-        </main>
+          </div>
+
+          <div class="lesson-list" id="lesson-list">
+            <!-- Filled by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Video Embed Content -->
+        <div id="video-embed-content" class="hidden">
+          <button class="back-btn" id="back-from-video">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <div class="video-container">
+            <iframe
+              id="video-player"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-controls">
+            <button id="play-btn"><i class="fas fa-play"></i> Play</button>
+            <button id="pause-btn"><i class="fas fa-pause"></i> Pause</button>
+            <button id="fullscreen-btn">
+              <i class="fas fa-expand"></i> Fullscreen
+            </button>
+          </div>
+          <div class="course-info" style="margin-top: 2rem">
+            <h2 id="video-course-title">Web Development Fundamentals</h2>
+            <p id="video-lesson-title">Lesson 1: Introduction to HTML</p>
+            <p id="video-description">
+              In this lesson, we'll cover the basics of HTML structure and
+              commonly used tags.
+            </p>
+          </div>
+          <div class="recommended-tutorials" style="margin-top: 3rem">
+            <h3>Recommended Tutorials</h3>
+            <div id="tutorial-list" class="tutorial-list">
+              <!-- Tutorials will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
     <script src="script.js"></script>
-   
+  </body>
+</html>
